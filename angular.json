@@ -29,5 +29,8 @@
             }
         }
     },
-    "defaultProject": "helloapp"
+    "defaultProject": "helloapp",
+    "cli": {
+      "analytics": false
+    }
 }

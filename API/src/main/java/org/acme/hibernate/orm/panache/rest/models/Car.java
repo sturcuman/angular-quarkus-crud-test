@@ -13,11 +13,11 @@ public class Car extends PanacheEntityBase {
     public Long id;
 
     @Column(nullable = false)
-    public String brand;
+    public String type;
     @Column(nullable = false)
     public String model;
     @Column(nullable = false)
-    public String country;
+    public String color;
     @Column(nullable = false)
     public Integer price;
 
@@ -25,10 +25,10 @@ public class Car extends PanacheEntityBase {
     public Car(){}
 
 
-    public Car(String brand, String model, String country, Integer price) {
-        this.brand = brand;
+    public Car(String type, String model, String color, Integer price) {
+        this.type = type;
         this.model = model;
-        this.country = country;
+        this.color = color;
         this.price = price;
     }
 
@@ -37,9 +37,9 @@ public class Car extends PanacheEntityBase {
     public String toString() {
         return "Car{" +
                 "id=" + id +
-                ", brand='" + brand + '\'' +
+                ", brand='" + type + '\'' +
                 ", model='" + model + '\'' +
-                ", country='" + country + '\'' +
+                ", country='" + color + '\'' +
                 ", price=" + price +
                 '}';
     }

@@ -15,7 +15,7 @@ public class CarService {
 
 
     public void create(Car car) {
-        System.out.println("Create car with name: " + car.brand);
+        System.out.println("Create car with name: " + car.type);
         car.persist();
     }
 
@@ -42,9 +42,9 @@ public class CarService {
             throw new RestApplicationException(String.format(ERROR_TEMPLATE, id));
         }
 
-        oldCar.brand = car.brand;
+        oldCar.type = car.type;
         oldCar.model = car.model;
-        oldCar.country = car.country;
+        oldCar.color = car.color;
         oldCar.price = car.price;
     }
 

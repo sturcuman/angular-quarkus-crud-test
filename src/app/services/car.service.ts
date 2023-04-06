@@ -9,20 +9,20 @@ export class CarService {
         return (await axios.get('http://localhost:8080/api/cars')).data;
     }
 
-    async create(brand, model, country, price) {
+    async create(type, model, color, price) {
         return await axios.post('http://localhost:8080/api/cars', {
-            brand: brand,
+            type: type,
             model: model,
-            country: country,
+            color: color,
             price: price
         });
     }
 
-    async updateById(id, brand, model, country, price) {
+    async updateById(id, type, model, color, price) {
         await axios.patch('http://localhost:8080/api/cars/' + id, {
-            brand: brand,
+            type: type,
             model: model,
-            country: country,
+            color: color,
             price: price
         })
     }
